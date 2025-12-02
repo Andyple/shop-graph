@@ -22,6 +22,7 @@ Guidelines:
 1. Generate 3-5 distinct search queries to maximize coverage.
 2. Extract specific constraints (max price, must-have features).
 3. Identify negative keywords to filter noise.
+4. Generate queries that target product websites, and NOT reviews. Your queries should use "site:amazon.com", "site:bestbuy.com", "buy [item] online", etc.
 
 Return the result strictly as a structured SearchPlan."""
 
