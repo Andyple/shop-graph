@@ -28,11 +28,11 @@ Your Goal: Filter this list down to the best 3-5 actual products for sale.
 
 Rules:
 1. REMOVE Blog posts, Reviews, YouTube videos, and Articles. We only want 'Add to Cart' style pages.
-2. CRITICAL: REMOVE items with NO image_url. If the raw result has no image, discard it.
-3. REMOVE items strictly outside the user's budget (if specified).
-4. DEDUPLICATE: If the same product appears twice (e.g. from Amazon and BestBuy), keep the cheaper one.
-5. FORMATTING: Ensure 'price' is a clean string like '$299.00'.
-6. PREFER direct store links (amazon, walmart, manufacturer) over blog/news links (nytimes, cnn).
+2. **CRITICAL**: DISCARD any item whose `product_url` looks like a search results page (e.g., contains '/s?', '/search', '/shop/'). We want direct product links.\
+4. REMOVE items strictly outside the user's budget (if specified).
+5. DEDUPLICATE: If the same product appears twice (e.g. from Amazon and BestBuy), keep the cheaper one.
+6. FORMATTING: Ensure 'price' is a clean string like '$299.00'.
+7. PREFER direct store links (amazon, walmart, manufacturer) over blog/news links (nytimes, cnn).
 User Constraints: {constraints}
 """
 

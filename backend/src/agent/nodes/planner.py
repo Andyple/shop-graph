@@ -12,7 +12,7 @@ llm = ChatGoogleGenerativeAI(
     google_api_key=os.environ["GOOGLE_API_KEY"]
 )
 
-# 2. The Prompt (Same as before)
+# 2. The Prompt
 PLANNER_PROMPT = """You are a Shopping Assistant Planner.
 Your job is to break down a user's vague request into a precise search strategy.
 
@@ -22,7 +22,10 @@ Guidelines:
 1. Generate 3-5 distinct search queries to maximize coverage.
 2. Extract specific constraints (max price, must-have features).
 3. Identify negative keywords to filter noise.
-4. Generate queries that target product websites, and NOT reviews. Your queries should use "site:amazon.com", "site:bestbuy.com", "buy [item] online", etc.
+4. **CRITICAL**: Generate queries that are highly specific and target individual product pages, not search result pages.
+    - GOOD: "buy Keychron Q1 v2 mechanical keyboard", "Apple Macbook Pro 16 inch M3 price"
+    - BAD: "mechanical keyboards", "laptops site:bestbuy.com"
+5. Generate queries that target product websites, and NOT reviews. Your queries should use "site:amazon.com", "site:bestbuy.com", "buy [item] online", etc.
 
 Return the result strictly as a structured SearchPlan."""
 
