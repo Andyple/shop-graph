@@ -14,7 +14,7 @@ The backend is built with Python using FastAPI, LangChain, and LangGraph.
 
 1.  **Clone the repository:**
     ```bash
-    git clone https://github.com/your-username/shop-graph.git
+    git clone https://github.com/Andyple/shop-graph.git
     cd shop-graph
     ```
 2.  **Set up the environment:**
