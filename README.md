@@ -2,10 +2,6 @@
 
 An app that utilizes AI-Agents to help you shop online.
 
-## 🚧 Work in Progress 🚧
-
-This project is currently under active development. The backend is the primary focus, and the mobile app is planned for the future.
-
 ## Backend
 
 The backend is built with Python using FastAPI, LangChain, and LangGraph.
